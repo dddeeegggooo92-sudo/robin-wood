@@ -1134,6 +1134,27 @@
         letter-spacing: 0.02em;
         white-space: nowrap;
       }
+
+      /* Footer Disclaimer Section */
+      .footer {
+        padding: 40px 18px;
+        background: #f7f9fc;
+        color: #718096;
+        text-align: center;
+        border-top: 1px solid rgba(7, 20, 47, 0.06);
+      }
+
+      .footer__content {
+        width: min(100%, 820px);
+        margin: 0 auto;
+      }
+
+      .footer__disclaimer {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #718096;
+      }
     </style>
   </head>
   <body>
@@ -1621,6 +1642,14 @@
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <p class="footer__disclaimer">
+          <strong>Aviso legal:</strong> Este sitio no forma parte de Facebook™ ni de Meta Platforms, Inc. Además, este sitio no está avalado, administrado ni patrocinado por Facebook™. Facebook™ es una marca registrada de Meta Platforms, Inc.
+        </p>
+      </div>
+    </footer>
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
