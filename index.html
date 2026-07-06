@@ -1020,15 +1020,6 @@
         gap: 32px;
       }
 
-      @media (min-width: 768px) {
-        .guarantee-cta__content {
-          flex-direction: row;
-          align-items: center;
-          text-align: left;
-          gap: 48px;
-        }
-      }
-
       .guarantee-cta__seal-wrap {
         flex: 0 0 180px;
         display: flex;
@@ -1042,18 +1033,11 @@
       }
 
       .guarantee-cta__info {
-        flex: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
-      }
-
-      @media (min-width: 768px) {
-        .guarantee-cta__info {
-          align-items: flex-start;
-        }
       }
 
       .guarantee-cta__title {
@@ -1065,24 +1049,13 @@
         text-align: center;
       }
 
-      @media (min-width: 768px) {
-        .guarantee-cta__title {
-          text-align: left;
-        }
-      }
-
       .guarantee-cta__text {
         margin: 0;
         font-size: clamp(16px, 2vw, 18px);
         line-height: 1.6;
         color: #4a5568;
         text-align: center;
-      }
-
-      @media (min-width: 768px) {
-        .guarantee-cta__text {
-          text-align: left;
-        }
+        max-width: 720px;
       }
 
       .guarantee-cta__cta-wrap {
@@ -1094,15 +1067,8 @@
         width: 100%;
       }
 
-      @media (min-width: 768px) {
-        .guarantee-cta__cta-wrap {
-          align-items: flex-start;
-          align-self: stretch;
-        }
-      }
-
       .guarantee-cta__btn {
-        width: 100% !important;
+        width: min(760px, calc(100% - 30px)) !important;
         margin-top: 0 !important;
         font-size: clamp(22px, 3.2vw, 38px) !important;
       }
@@ -1113,13 +1079,6 @@
         text-align: center;
       }
 
-      @media (min-width: 768px) {
-        .guarantee-cta__safe {
-          justify-content: flex-start;
-          text-align: left;
-        }
-      }
-
       /* Payment Methods Grid */
       .guarantee-cta__payments {
         width: 100%;
@@ -1128,12 +1087,6 @@
         flex-direction: column;
         align-items: center;
         gap: 12px;
-      }
-
-      @media (min-width: 768px) {
-        .guarantee-cta__payments {
-          align-items: flex-start;
-        }
       }
 
       .guarantee-cta__payments-title {
@@ -1151,12 +1104,6 @@
         display: block;
         margin: 0 auto;
         opacity: 0.95;
-      }
-
-      @media (min-width: 768px) {
-        .guarantee-cta__payments-banner {
-          margin: 0;
-        }
       }
 
       /* Footer Disclaimer Section */
@@ -1196,11 +1143,7 @@
         margin: 0 0 8px;
         text-align: center;
       }
-      @media (min-width: 768px) {
-        .guarantee-cta__cta-wrap .cta-price-tag {
-          text-align: left;
-        }
-      }
+
 
       /* Announcement Bar */
       .announcement-bar {
@@ -1251,11 +1194,7 @@
         font-style: italic;
         text-align: center;
       }
-      @media (min-width: 768px) {
-        .guarantee-cta__cta-wrap .cta-price-warning {
-          text-align: left;
-        }
-      }
+
 
       /* Shimmer effect for high-conversion CTAs */
       .hero__cta::before,
@@ -1765,10 +1704,10 @@
 
     <section class="guarantee-cta" id="comprar" aria-labelledby="guarantee-title">
       <div class="guarantee-cta__content">
-        <div class="guarantee-cta__seal-wrap">
-          <img src="assets/garantia-calidad.png" alt="Sello de Calidad 100% Garantizada" class="guarantee-cta__seal" />
-        </div>
         <div class="guarantee-cta__info">
+          <div class="guarantee-cta__seal-wrap">
+            <img src="assets/garantia-calidad.png" alt="Sello de Calidad 100% Garantizada" class="guarantee-cta__seal" />
+          </div>
           <h2 class="guarantee-cta__title" id="guarantee-title">Compra 100% Segura y Garantizada</h2>
           <p class="guarantee-cta__text">
             Tu satisfacción es nuestra prioridad. Te garantizamos acceso inmediato y permanente a toda la colección digital en Google Drive. Si tienes alguna duda o dificultad para acceder a tus historietas, te brindamos soporte técnico de inmediato.
