@@ -896,37 +896,43 @@
         }
 
         .bonus-card {
-          grid-template-columns: 132px minmax(0, 1fr);
-          min-height: 144px;
-          border-radius: 14px;
+          grid-template-columns: 105px minmax(0, 1fr);
+          min-height: 100px;
+          border-radius: 10px;
+          box-shadow: 0 6px 16px rgba(7, 20, 47, 0.06);
         }
 
         .bonus-card__media {
-          min-height: 144px;
-          padding: 10px 12px;
+          min-height: 100px;
+          padding: 8px;
         }
 
         .bonus-card__media img {
-          max-height: 138px;
+          max-height: 90px;
         }
 
         .bonus-card__body {
-          padding: 16px 16px 16px 10px;
+          padding: 12px 14px 12px 6px;
         }
 
         .bonus-card__badge {
-          min-height: 27px;
-          margin-bottom: 8px;
-          padding: 0 11px;
-          font-size: 14px;
+          min-height: 20px;
+          margin-bottom: 4px;
+          padding: 2px 8px;
+          font-size: 11px;
+          font-weight: 800;
         }
 
         .bonus-card__title {
-          font-size: clamp(21px, 6.4vw, 28px);
+          font-size: clamp(14px, 4vw, 17px);
+          font-weight: 800;
+          line-height: 1.15;
         }
 
         .bonus-card__copy {
-          font-size: clamp(15px, 4.4vw, 18px);
+          margin: 4px 0 0;
+          font-size: clamp(12px, 3.2vw, 14px);
+          line-height: 1.3;
         }
 
         .bonuses__safe,
