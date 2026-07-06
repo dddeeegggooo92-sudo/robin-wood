@@ -16,6 +16,10 @@
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       html,
       body {
         min-height: 100%;
@@ -580,6 +584,199 @@
         transform: rotate(45deg);
       }
 
+      /* Testimonials Section */
+      .testimonials {
+        padding: clamp(60px, 8vw, 102px) 18px;
+        background: #f7f9fc;
+        color: #07142f;
+        text-align: center;
+      }
+
+      .testimonials__content {
+        width: min(100%, 820px);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .testimonials__title {
+        max-width: 740px;
+        margin: 0 auto clamp(28px, 4vw, 42px);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: clamp(38px, 6vw, 64px);
+        font-weight: 900;
+        line-height: 1.02;
+        letter-spacing: -0.01em;
+      }
+
+      /* Carousel Wrapper with arrows outside */
+      .carousel-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0 48px;
+      }
+
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+      }
+
+      .carousel-slide {
+        flex: 0 0 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+
+      /* Testimonial Card */
+      .testimonial-card {
+        padding: clamp(24px, 4vw, 42px) clamp(20px, 4vw, 36px);
+        border: 1px solid rgba(7, 20, 47, 0.06);
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 12px 32px rgba(7, 20, 47, 0.06);
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .testimonial-card__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .testimonial-card__profile {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .testimonial-card__avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(7, 20, 47, 0.08);
+      }
+
+      .testimonial-card__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .testimonial-card__author {
+        margin: 0;
+        font-size: clamp(15px, 2vw, 17px);
+        font-weight: 900;
+        color: #07142f;
+        font-style: normal;
+      }
+
+      .testimonial-card__source {
+        font-size: 11px;
+        font-weight: 700;
+        color: #4a5568;
+        background: #edf2f7;
+        padding: 2px 8px;
+        border-radius: 99px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        align-self: flex-start;
+      }
+
+      .testimonial-card__stars {
+        display: flex;
+        gap: 3px;
+      }
+
+      .testimonial-card__star {
+        width: 18px;
+        height: 18px;
+        fill: #f5c830;
+      }
+
+      .testimonial-card__text {
+        font-size: clamp(16px, 2.2vw, 19px);
+        line-height: 1.55;
+        color: #2d3748;
+        font-style: italic;
+        margin: 0;
+      }
+
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(7, 20, 47, 0.08);
+        border-radius: 50%;
+        background: #fff;
+        color: #07142f;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(7, 20, 47, 0.08);
+        z-index: 10;
+        transition: background-color 0.2s, color 0.2s;
+      }
+
+      .carousel-btn svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      .carousel-btn:hover {
+        background: #07142f;
+        color: #fff;
+      }
+
+      .carousel-btn--prev {
+        left: 0;
+      }
+
+      .carousel-btn--next {
+        right: 0;
+      }
+
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 24px;
+      }
+
+      .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(7, 20, 47, 0.18);
+        cursor: pointer;
+        padding: 0;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .carousel-dot.active {
+        background: #08af2d;
+        transform: scale(1.2);
+      }
+
       @media (max-width: 720px) {
         .hero {
           align-items: flex-start;
@@ -740,6 +937,202 @@
           padding-top: 12px;
           text-align: center;
         }
+
+        .carousel-wrapper {
+          padding: 0;
+        }
+
+        .carousel-btn {
+          display: none;
+        }
+
+        .testimonials {
+          padding: 42px 18px;
+        }
+
+        .testimonials__title {
+          font-size: clamp(32px, 10vw, 48px);
+        }
+
+        .guarantee-cta {
+          padding: 42px 18px;
+        }
+
+        .guarantee-cta__seal {
+          width: 140px;
+        }
+      }
+
+      /* Guarantee and Final CTA Section */
+      .guarantee-cta {
+        padding: clamp(60px, 8vw, 102px) 18px;
+        background: #fff;
+        color: #07142f;
+        text-align: center;
+        border-top: 1px solid rgba(7, 20, 47, 0.08);
+      }
+
+      .guarantee-cta__badge {
+        display: inline-flex;
+        align-self: center;
+        background: #fff5f5;
+        border: 1px solid #feb2b2;
+        color: #c53030;
+        padding: 4px 12px;
+        border-radius: 99px;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
+
+      @media (min-width: 768px) {
+        .guarantee-cta__badge {
+          align-self: flex-start;
+        }
+      }
+
+      .guarantee-cta__content {
+        width: min(100%, 820px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+      }
+
+      @media (min-width: 768px) {
+        .guarantee-cta__content {
+          flex-direction: row;
+          align-items: center;
+          text-align: left;
+          gap: 48px;
+        }
+      }
+
+      .guarantee-cta__seal-wrap {
+        flex: 0 0 180px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .guarantee-cta__seal {
+        width: 180px;
+        height: auto;
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
+      }
+
+      .guarantee-cta__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .guarantee-cta__title {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 900;
+        line-height: 1.1;
+      }
+
+      .guarantee-cta__text {
+        margin: 0;
+        font-size: clamp(16px, 2vw, 18px);
+        line-height: 1.6;
+        color: #4a5568;
+      }
+
+      .guarantee-cta__cta-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12px;
+        gap: 16px;
+      }
+
+      @media (min-width: 768px) {
+        .guarantee-cta__cta-wrap {
+          align-items: flex-start;
+        }
+      }
+
+      .guarantee-cta__btn {
+        width: 100% !important;
+        margin-top: 0 !important;
+      }
+
+      .guarantee-cta__safe {
+        margin: 0 !important;
+        justify-content: center;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .guarantee-cta__safe {
+          justify-content: flex-start;
+          text-align: left;
+        }
+      }
+
+      /* Payment Methods Grid */
+      .guarantee-cta__payments {
+        width: 100%;
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      @media (min-width: 768px) {
+        .guarantee-cta__payments {
+          align-items: flex-start;
+        }
+      }
+
+      .guarantee-cta__payments-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #718096;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .guarantee-cta__payments-logos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .guarantee-cta__payments-logos {
+          justify-content: flex-start;
+        }
+      }
+
+      .payment-logo {
+        width: 44px;
+        height: 28px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .payment-text-badge {
+        font-size: 12px;
+        font-weight: 800;
+        color: #4a5568;
+        background: #edf2f7;
+        padding: 5px 12px;
+        border-radius: 6px;
+        border: 1px solid rgba(7, 20, 47, 0.06);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
       }
     </style>
   </head>
@@ -867,6 +1260,7 @@
         </div>
       </div>
     </section>
+
 
     <section class="bonuses" aria-labelledby="bonuses-title">
       <div class="bonuses__content">
@@ -1031,6 +1425,203 @@
         </div>
       </div>
     </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="testimonials__content">
+        <h2 class="testimonials__title" id="testimonials-title">
+          Esto es lo que dicen nuestros lectores
+        </h2>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-btn carousel-btn--prev" aria-label="Anterior testimonio">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          </button>
+          <button class="carousel-btn carousel-btn--next" aria-label="Siguiente testimonio">
+            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </button>
+
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <!-- Slide 1 -->
+              <div class="carousel-slide">
+                <blockquote class="testimonial-card">
+                  <div class="testimonial-card__header">
+                    <div class="testimonial-card__profile">
+                      <img class="testimonial-card__avatar" src="assets/avatar-patricia-casual.jpg" alt="Patricia Noemí" />
+                      <div class="testimonial-card__meta">
+                        <cite class="testimonial-card__author">Patricia Noemí</cite>
+                        <span class="testimonial-card__source">Facebook</span>
+                      </div>
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="Calificación 5 estrellas">
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                  </div>
+                  <p class="testimonial-card__text">
+                    "Recibí el pedido de inmediato. A menudo recordaba qué linda fue mi infancia leyendo esas revistas y lamentaba no haberme guardado ninguna. Pero esto es fantástico, un gran mimo al corazón. Me estoy divirtiendo como antes, sanamente... ¡GRACIAS POR ESTE PROYECTO, LO RECOMIENDO! ES UNA AUTOTERAPIA."
+                  </p>
+                </blockquote>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-slide">
+                <blockquote class="testimonial-card">
+                  <div class="testimonial-card__header">
+                    <div class="testimonial-card__profile">
+                      <img class="testimonial-card__avatar" src="assets/avatar-victor-casual.jpg" alt="Víctor" />
+                      <div class="testimonial-card__meta">
+                        <cite class="testimonial-card__author">Víctor (82 años)</cite>
+                        <span class="testimonial-card__source">Correo</span>
+                      </div>
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="Calificación 5 estrellas">
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                  </div>
+                  <p class="testimonial-card__text">
+                    "Muchas gracias a ustedes por hacernos recordar nuestra niñez, ya en 10 días cumplo 82 años. Dios los bendiga."
+                  </p>
+                </blockquote>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-slide">
+                <blockquote class="testimonial-card">
+                  <div class="testimonial-card__header">
+                    <div class="testimonial-card__profile">
+                      <img class="testimonial-card__avatar" src="assets/avatar-luis-casual.jpg" alt="Luis" />
+                      <div class="testimonial-card__meta">
+                        <cite class="testimonial-card__author">Luis</cite>
+                        <span class="testimonial-card__source">Facebook</span>
+                      </div>
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="Calificación 5 estrellas">
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                  </div>
+                  <p class="testimonial-card__text">
+                    "Acabo de comprarlo hace 10 minutos. Ya tengo las carpetas en Gmail... ¡Extraordinario!"
+                  </p>
+                </blockquote>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="carousel-slide">
+                <blockquote class="testimonial-card">
+                  <div class="testimonial-card__header">
+                    <div class="testimonial-card__profile">
+                      <img class="testimonial-card__avatar" src="assets/avatar-florindo-casual.jpg" alt="Florindo" />
+                      <div class="testimonial-card__meta">
+                        <cite class="testimonial-card__author">Florindo (64 años)</cite>
+                        <span class="testimonial-card__source">Correo Electrónico</span>
+                      </div>
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="Calificación 5 estrellas">
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                  </div>
+                  <p class="testimonial-card__text">
+                    "Muchas gracias. Recibí y estoy recordando un tiempo de historietas que añoraba a mis 64 años. Gracias por conectarme con eso."
+                  </p>
+                </blockquote>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="carousel-slide">
+                <blockquote class="testimonial-card">
+                  <div class="testimonial-card__header">
+                    <div class="testimonial-card__profile">
+                      <img class="testimonial-card__avatar" src="assets/avatar-cinthya-casual.jpg" alt="Cinthya" />
+                      <div class="testimonial-card__meta">
+                        <cite class="testimonial-card__author">Cinthya</cite>
+                        <span class="testimonial-card__source">WhatsApp</span>
+                      </div>
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="Calificación 5 estrellas">
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                      <svg class="testimonial-card__star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                  </div>
+                  <p class="testimonial-card__text">
+                    "¡Muchas gracias! Las historietas de Isidoro y Patoruzito fueron el mejor regalo de Reyes para mi mamá."
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-dots">
+            <button class="carousel-dot active" aria-label="Ir al testimonio 1"></button>
+            <button class="carousel-dot" aria-label="Ir al testimonio 2"></button>
+            <button class="carousel-dot" aria-label="Ir al testimonio 3"></button>
+            <button class="carousel-dot" aria-label="Ir al testimonio 4"></button>
+            <button class="carousel-dot" aria-label="Ir al testimonio 5"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guarantee-cta" id="comprar" aria-labelledby="guarantee-title">
+      <div class="guarantee-cta__content">
+        <div class="guarantee-cta__seal-wrap">
+          <img src="assets/garantia-calidad.png" alt="Sello de Calidad 100% Garantizada" class="guarantee-cta__seal" />
+        </div>
+        <div class="guarantee-cta__info">
+          <span class="guarantee-cta__badge">⚠️ Oferta por tiempo limitado</span>
+          <h2 class="guarantee-cta__title" id="guarantee-title">Compra 100% Segura y Garantizada</h2>
+          <p class="guarantee-cta__text">
+            Tu satisfacción es nuestra prioridad. Te garantizamos acceso inmediato y permanente a toda la colección digital en Google Drive. Si tienes alguna duda o dificultad para acceder a tus historietas, te brindamos soporte técnico de inmediato. ¡Recordar tu infancia tiene que ser una experiencia maravillosa y libre de preocupaciones!
+          </p>
+          
+          <div class="guarantee-cta__cta-wrap">
+            <a class="bonuses__cta guarantee-cta__btn" href="https://mpago.la/2S5kFwV" aria-label="Comprar mi pack">
+              <span>¡Sí, quiero mi pack!</span>
+            </a>
+            
+            <p class="hero__safe guarantee-cta__safe">
+              <span class="hero__safe-icon" aria-hidden="true"></span>
+              Pago seguro. Recibirás acceso inmediato a tu correo electrónico tras el pago.
+            </p>
+
+            <!-- Payment Methods Logos (Conversion Booster) -->
+            <div class="guarantee-cta__payments" aria-label="Medios de pago aceptados">
+              <span class="guarantee-cta__payments-title">Medios de pago aceptados en Argentina:</span>
+              <div class="guarantee-cta__payments-logos">
+                <!-- Visa SVG -->
+                <svg class="payment-logo" viewBox="0 0 48 32" aria-label="Visa"><rect width="48" height="32" rx="4" fill="#1A1F71"/><path d="M19 10h2.6l1.6 6.3 1.6-6.3H27l-2.8 9h-2.5l-2.7-9zm11 0h2.3l2.2 9h-2.3l-.5-1.9H29.5l-.3 1.9H27l3-9zm.5 5.5l.6-2.4.3 2.4h-.9zM10.8 10h3.5l1 4.5.8-4.5h2.1l-1.9 9H14l-2.2-7-.1 7H10l.8-9zm25.5 0h-2.3c-.6 0-1 .3-1.2.9l-3.3 8.1h2.5l.5-1.4h3.1l.3 1.4h2.2l-1.8-9z" fill="#F7B600"/></svg>
+                <!-- Mastercard SVG -->
+                <svg class="payment-logo" viewBox="0 0 48 32" aria-label="Mastercard"><rect width="48" height="32" rx="4" fill="#0A0A0A"/><circle cx="20" cy="16" r="10" fill="#EB001B"/><circle cx="28" cy="16" r="10" fill="#F79E1B" fill-opacity="0.8"/></svg>
+                <!-- Mercado Pago badge -->
+                <span class="payment-text-badge">Mercado Pago</span>
+                <!-- Pago Fácil / Rapipago badge -->
+                <span class="payment-text-badge">Pago Fácil</span>
+                <span class="payment-text-badge">Rapipago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const faqItems = document.querySelectorAll('.faq__item');
@@ -1046,6 +1637,100 @@
             item.classList.toggle('is-open');
           });
         });
+
+        // Carousel logic
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-btn--next');
+        const prevButton = document.querySelector('.carousel-btn--prev');
+        const dotsNav = document.querySelector('.carousel-dots');
+        const dots = Array.from(dotsNav.children);
+        
+        let currentIndex = 0;
+        let autoplayTimer = null;
+        
+        const updateCarousel = (index) => {
+          track.style.transform = `translateX(-${index * 100}%)`;
+          dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === index);
+          });
+          currentIndex = index;
+        };
+        
+        const nextSlide = () => {
+          let nextIndex = currentIndex + 1;
+          if (nextIndex >= slides.length) {
+            nextIndex = 0;
+          }
+          updateCarousel(nextIndex);
+        };
+        
+        const prevSlide = () => {
+          let prevIndex = currentIndex - 1;
+          if (prevIndex < 0) {
+            prevIndex = slides.length - 1;
+          }
+          updateCarousel(prevIndex);
+        };
+        
+        const startAutoplay = () => {
+          stopAutoplay();
+          autoplayTimer = setInterval(nextSlide, 5000);
+        };
+        
+        const stopAutoplay = () => {
+          if (autoplayTimer) {
+            clearInterval(autoplayTimer);
+          }
+        };
+        
+        if (nextButton) {
+          nextButton.addEventListener('click', () => {
+            nextSlide();
+            startAutoplay();
+          });
+        }
+        
+        if (prevButton) {
+          prevButton.addEventListener('click', () => {
+            prevSlide();
+            startAutoplay();
+          });
+        }
+        
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            updateCarousel(index);
+            startAutoplay();
+          });
+        });
+        
+        // Touch support for swiping
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        const handleGesture = () => {
+          if (touchEndX < touchStartX - 50) {
+            nextSlide();
+            startAutoplay();
+          }
+          if (touchEndX > touchStartX + 50) {
+            prevSlide();
+            startAutoplay();
+          }
+        };
+        
+        track.addEventListener('touchstart', e => {
+          touchStartX = e.changedTouches[0].screenX;
+          stopAutoplay();
+        }, { passive: true });
+        
+        track.addEventListener('touchend', e => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleGesture();
+        }, { passive: true });
+        
+        startAutoplay();
       });
     </script>
   </body>
