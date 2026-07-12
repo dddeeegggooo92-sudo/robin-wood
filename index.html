@@ -40,7 +40,7 @@
         min-height: 100vh;
         align-items: center;
         justify-content: center;
-        padding: clamp(34px, 4vw, 72px) 18px clamp(42px, 5vw, 82px);
+        padding: clamp(40px, 5vw, 60px) 18px;
       }
 
       .hero__content {
@@ -155,7 +155,7 @@
 
 
       .includes {
-        padding: clamp(52px, 7vw, 92px) 18px clamp(84px, 10vw, 132px);
+        padding: clamp(40px, 5vw, 60px) 18px;
         background: #fff;
         color: #020202;
       }
@@ -167,10 +167,10 @@
 
       .includes__title {
         max-width: 880px;
-        margin: 0 auto clamp(48px, 6vw, 74px);
+        margin: 0 auto clamp(32px, 4vw, 48px);
         color: var(--black);
         font-family: Arial, Helvetica, sans-serif;
-        font-size: clamp(46px, 7.4vw, 86px);
+        font-size: clamp(38px, 5.5vw, 68px);
         font-weight: 900;
         line-height: 0.92;
         text-align: center;
@@ -279,7 +279,7 @@
       }
 
       .bonuses {
-        padding: clamp(70px, 9vw, 118px) 18px clamp(72px, 9vw, 120px);
+        padding: clamp(40px, 5vw, 60px) 18px;
         background: #fff;
         color: #07142f;
       }
@@ -305,7 +305,7 @@
         margin: 0 auto;
         color: #07142f;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: clamp(42px, 6.9vw, 76px);
+        font-size: clamp(36px, 5.2vw, 64px);
         font-weight: 900;
         line-height: 0.96;
         letter-spacing: 0;
@@ -396,9 +396,8 @@
 
       .bonuses__safe,
       .hero__safe {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
+        display: block;
+        text-align: center;
         margin: 24px auto 14px;
         color: #40506d;
         font-size: clamp(15px, 2vw, 18px);
@@ -407,12 +406,15 @@
 
       .bonuses__safe-icon,
       .hero__safe-icon {
+        display: inline-block;
+        vertical-align: middle;
         position: relative;
         width: 18px;
         height: 16px;
-        flex: 0 0 auto;
+        margin-right: 8px;
         border-radius: 4px;
         background: #f4c21b;
+        transform: translateY(2px);
       }
 
       .bonuses__safe-icon::before,
@@ -476,7 +478,7 @@
       }
 
       .faq {
-        padding: clamp(70px, 9vw, 112px) 18px clamp(76px, 10vw, 124px);
+        padding: clamp(40px, 5vw, 60px) 18px;
         background: #fff;
         color: #171717;
       }
@@ -488,9 +490,9 @@
 
       .faq__title {
         max-width: 880px;
-        margin: 0 auto clamp(34px, 5vw, 54px);
+        margin: 0 auto clamp(28px, 3.5vw, 42px);
         color: var(--black);
-        font-size: clamp(46px, 7.4vw, 86px);
+        font-size: clamp(38px, 5.5vw, 68px);
         font-weight: 900;
         line-height: 0.92;
         text-align: center;
@@ -604,7 +606,7 @@
 
       /* Testimonials Section */
       .testimonials {
-        padding: clamp(60px, 8vw, 102px) 18px;
+        padding: clamp(40px, 5vw, 60px) 18px;
         background: #f7f9fc;
         color: #07142f;
         text-align: center;
@@ -618,9 +620,9 @@
 
       .testimonials__title {
         max-width: 740px;
-        margin: 0 auto clamp(28px, 4vw, 42px);
+        margin: 0 auto clamp(24px, 3vw, 34px);
         font-family: Arial, Helvetica, sans-serif;
-        font-size: clamp(38px, 6vw, 64px);
+        font-size: clamp(32px, 4.8vw, 56px);
         font-weight: 900;
         line-height: 1.02;
         letter-spacing: -0.01em;
@@ -798,7 +800,6 @@
       @media (max-width: 720px) {
         .hero {
           align-items: flex-start;
-          padding-top: 38px;
         }
 
         .hero__title {
@@ -822,13 +823,9 @@
 
 
 
-        .includes {
-          padding-top: 54px;
-        }
-
         .includes__title {
-          margin-bottom: 42px;
-          font-size: clamp(39px, 11.4vw, 58px);
+          margin-bottom: 24px;
+          font-size: clamp(30px, 8.5vw, 42px);
         }
 
         .includes__list {
@@ -871,16 +868,12 @@
           margin-top: 24px;
         }
 
-        .bonuses {
-          padding-top: 62px;
-        }
-
         .bonuses__eyebrow {
           font-size: clamp(16px, 4.8vw, 21px);
         }
 
         .bonuses__title {
-          font-size: clamp(39px, 11.4vw, 58px);
+          font-size: clamp(30px, 8.5vw, 42px);
         }
 
         .bonuses__subtitle {
@@ -940,15 +933,10 @@
         .bonuses__safe,
         .hero__safe {
           width: min(100%, 310px);
-          align-items: flex-start;
-        }
-
-        .faq {
-          padding-top: 62px;
         }
 
         .faq__title {
-          font-size: clamp(39px, 11.4vw, 58px);
+          font-size: clamp(30px, 8.5vw, 42px);
         }
 
         .faq__list {
@@ -992,16 +980,8 @@
           display: none;
         }
 
-        .testimonials {
-          padding: 42px 18px;
-        }
-
         .testimonials__title {
-          font-size: clamp(39px, 11.4vw, 58px);
-        }
-
-        .guarantee-cta {
-          padding: 42px 18px;
+          font-size: clamp(28px, 8vw, 38px);
         }
 
         .guarantee-cta__seal {
@@ -1009,13 +989,13 @@
         }
 
         .guarantee-cta__title {
-          font-size: clamp(39px, 11.4vw, 58px);
+          font-size: clamp(24px, 7vw, 34px);
         }
       }
 
       /* Guarantee and Final CTA Section */
       .guarantee-cta {
-        padding: clamp(60px, 8vw, 102px) 18px;
+        padding: clamp(40px, 5vw, 60px) 18px;
         background: #fff;
         color: #07142f;
         text-align: center;
@@ -1075,7 +1055,7 @@
       .guarantee-cta__title {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: clamp(28px, 4vw, 42px);
+        font-size: clamp(26px, 3.5vw, 38px);
         font-weight: 900;
         line-height: 1.1;
         text-align: center;
@@ -1106,8 +1086,7 @@
       }
 
       .guarantee-cta__safe {
-        margin: 0 !important;
-        justify-content: center;
+        margin: 0 auto !important;
         text-align: center;
       }
 
@@ -1390,7 +1369,7 @@
               />
             </div>
             <p class="includes__text">
-              <span class="includes__number">497</span>
+              <span class="includes__number">191</span>
               Historietas<br />
               de Patoruzito
             </p>
@@ -1441,7 +1420,7 @@
         <p class="bonuses__eyebrow">&gt; Bonos de regalo exclusivos &lt;</p>
 
         <h2 class="bonuses__title" id="bonuses-title">
-          Llevate 6 regalos exclusivos <strong>gratis</strong>
+          Llevate 6 bonos de regalo <strong style="color: #e53e3e;">gratis</strong>
         </h2>
 
         <p class="bonuses__subtitle">
