@@ -166,72 +166,133 @@
       }
 
       .includes__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
         max-width: 880px;
         margin: 0 auto clamp(32px, 4vw, 48px);
         color: var(--black);
         font-family: Arial, Helvetica, sans-serif;
-        font-size: clamp(38px, 5.5vw, 68px);
+        font-size: clamp(28px, 4.5vw, 48px);
         font-weight: 900;
-        line-height: 0.92;
+        line-height: 1;
         text-align: center;
-        letter-spacing: 0;
+      }
+      
+      .includes__title::before,
+      .includes__title::after {
+        content: "";
+        flex: 0 1 80px;
+        height: 2px;
+        background: #d4c5b9;
       }
 
       .includes__list {
-        display: grid;
-        gap: 14px;
-        width: min(620px, calc(100% - 64px));
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: min(720px, calc(100% - 36px));
         margin: 0 auto;
       }
 
       .includes__item {
-        display: grid;
-        grid-template-columns: auto auto;
+        display: flex;
         align-items: center;
-        justify-content: center;
-        column-gap: clamp(22px, 4vw, 34px);
-        min-height: 170px;
+        border: 1.5px solid #d4c5b9;
+        border-radius: 12px;
+        background: #fffdfa;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
         overflow: hidden;
-        border: 1px solid rgba(7, 20, 47, 0.09);
-        border-radius: 18px;
-        background: #fff;
-        box-shadow: 0 12px 26px rgba(7, 20, 47, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
-      .includes__image-wrap {
+      .includes__item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(139, 92, 26, 0.08);
+        border-color: #c4b1a1;
+      }
+
+      .includes__cover-wrap {
+        flex: 0 0 110px;
+        height: 110px;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 170px;
-        width: clamp(80px, 13vw, 118px);
-        padding: 14px 0;
+        background: #fdfaf6;
+        padding: 8px;
       }
 
-      .includes__image {
-        display: block;
-        width: min(100%, var(--character-width));
-        height: auto;
+      .includes__cover {
+        width: 100%;
+        height: 100%;
         object-fit: contain;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
       }
 
-      .includes__text {
-        margin: 0;
-        min-width: min(250px, 46vw);
-        padding: 24px 0;
-        color: #40506d;
-        font-size: clamp(18px, 2.3vw, 24px);
-        font-weight: 500;
-        line-height: 1.16;
+      .includes__placeholder-cover {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 11px;
+        text-align: center;
+        padding: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .includes__placeholder-cover--tony {
+        background: linear-gradient(135deg, #e53e3e, #9b2c2c);
+      }
+
+      .includes__placeholder-cover--mark {
+        background: linear-gradient(135deg, #3182ce, #2b6cb0);
+      }
+
+      .includes__placeholder-cover--savarese {
+        background: linear-gradient(135deg, #dd6b20, #9c4221);
+      }
+
+      .placeholder-tag {
+        transform: rotate(-10deg);
+        letter-spacing: 0.05em;
+      }
+
+      .includes__divider {
+        width: 1.5px;
+        align-self: stretch;
+        background-color: #d4c5b9;
+      }
+
+      .includes__details {
+        flex: 1;
+        padding: 16px 24px;
         text-align: left;
       }
 
-      .includes__number {
-        display: block;
-        margin-bottom: 7px;
-        color: #07142f;
-        font-size: clamp(42px, 6.4vw, 62px);
+      .includes__name {
+        margin: 0 0 4px 0;
+        color: #1a1a1a;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
         font-weight: 900;
-        line-height: 0.86;
+        letter-spacing: 0.02em;
+        line-height: 1.1;
+      }
+
+      .includes__desc {
+        margin: 0;
+        color: #4a5568;
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 500;
       }
 
       .includes__delivery-note {
@@ -825,47 +886,51 @@
 
         .includes__title {
           margin-bottom: 24px;
-          font-size: clamp(30px, 8.5vw, 42px);
+          font-size: clamp(26px, 7.5vw, 36px);
+        }
+
+        .includes__title::before,
+        .includes__title::after {
+          display: none;
         }
 
         .includes__list {
-          gap: 12px;
-          width: calc(100% - 36px);
+          gap: 10px;
+          width: calc(100% - 16px);
         }
 
         .includes__item {
-          grid-template-columns: auto auto;
-          column-gap: 18px;
-          min-height: 142px;
-          border-radius: 14px;
+          border-radius: 10px;
         }
 
-        .includes__image-wrap {
-          min-height: 142px;
-          width: 78px;
-          padding: 10px 0;
+        .includes__cover-wrap {
+          flex: 0 0 90px;
+          height: 90px;
+          padding: 6px;
         }
 
-        .includes__text {
-          min-width: 142px;
-          padding: 18px 0;
-          font-size: clamp(15px, 4.4vw, 18px);
+        .includes__details {
+          padding: 12px 16px;
         }
 
-        .includes__number {
-          font-size: clamp(36px, 10vw, 46px);
+        .includes__name {
+          font-size: 16px;
+        }
+
+        .includes__desc {
+          font-size: 13px;
         }
 
         .includes__delivery-note {
-          width: calc(100% - 36px);
-          margin-top: 42px;
-          font-size: clamp(17px, 4.9vw, 22px);
+          width: calc(100% - 16px);
+          margin-top: 32px;
+          font-size: clamp(15px, 4.4vw, 19px);
           text-align: left;
         }
 
         .includes__video-frame {
-          width: calc(100% - 36px);
-          margin-top: 24px;
+          width: calc(100% - 16px);
+          margin-top: 20px;
         }
 
         .bonuses__eyebrow {
@@ -1339,56 +1404,114 @@
     <section class="includes" aria-labelledby="includes-title">
       <div class="includes__content">
         <h2 class="includes__title" id="includes-title">
-          ¿Qué incluye el pack?
+          ¿QUÉ INCLUYE ESTA COLECCIÓN?
         </h2>
 
         <div class="includes__list">
+          <!-- 1. Nippur de Lagash -->
           <article class="includes__item">
-            <div class="includes__image-wrap">
+            <div class="includes__cover-wrap">
               <img
-                class="includes__image"
-                src="assets/patoruzu-personaje.png"
-                alt="Patoruzú"
-                style="--character-width: 210px"
+                class="includes__cover"
+                src="assets/nippur-cover.jpg"
+                alt="Portada de Nippur de Lagash"
               />
             </div>
-            <p class="includes__text">
-              <span class="includes__number">427</span>
-              Historietas<br />
-              de Patoruzú
-            </p>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">NIPPUR DE LAGASH</h3>
+              <p class="includes__desc">Aventura y épica en la Mesopotamia antigua.</p>
+            </div>
           </article>
 
+          <!-- 2. Dago -->
           <article class="includes__item">
-            <div class="includes__image-wrap">
+            <div class="includes__cover-wrap">
               <img
-                class="includes__image"
-                src="assets/patoruzito-personaje.png"
-                alt="Patoruzito"
-                style="--character-width: 230px"
+                class="includes__cover"
+                src="assets/dago-cover.jpg"
+                alt="Portada de Dago"
               />
             </div>
-            <p class="includes__text">
-              <span class="includes__number">191</span>
-              Historietas<br />
-              de Patoruzito
-            </p>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">DAGO</h3>
+              <p class="includes__desc">Intriga, pasión y venganza en la Venecia del Renacimiento.</p>
+            </div>
           </article>
 
+          <!-- 3. Gilgamesh -->
           <article class="includes__item">
-            <div class="includes__image-wrap">
+            <div class="includes__cover-wrap">
               <img
-                class="includes__image"
-                src="assets/isidoro-personaje.png"
-                alt="Isidoro Cañones"
-                style="--character-width: 220px"
+                class="includes__cover"
+                src="assets/gilgamesh-cover.jpg"
+                alt="Portada de Gilgamesh"
               />
             </div>
-            <p class="includes__text">
-              <span class="includes__number">203</span>
-              Historietas de<br />
-              Isidoro Cañones
-            </p>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">GILGAMESH</h3>
+              <p class="includes__desc">El rey se convierte en leyenda.</p>
+            </div>
+          </article>
+
+          <!-- 4. El Tony -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--tony">
+                <span class="placeholder-tag">EL TONY</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">EL TONY</h3>
+              <p class="includes__desc">El justiciero del lejano oeste en tiempos de cambios.</p>
+            </div>
+          </article>
+
+          <!-- 5. Pepe Sánchez -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <img
+                class="includes__cover"
+                src="assets/pepe-sanchez-cover.jpg"
+                alt="Portada de Pepe Sánchez"
+              />
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">PEPE SÁNCHEZ</h3>
+              <p class="includes__desc">Aventuras increíbles en América.</p>
+            </div>
+          </article>
+
+          <!-- 6. Mark -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--mark">
+                <span class="placeholder-tag">MARK</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">MARK</h3>
+              <p class="includes__desc">Honor, amistad y lucha por la libertad.</p>
+            </div>
+          </article>
+
+          <!-- 7. Savarese -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--savarese">
+                <span class="placeholder-tag">SAVARESE</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">SAVARESE</h3>
+              <p class="includes__desc">Un aventurero audaz en cada historia.</p>
+            </div>
           </article>
         </div>
 
