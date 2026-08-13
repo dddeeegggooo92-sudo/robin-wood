@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pack Historietas Digitales</title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
       :root {
         color-scheme: light;
         --black: #050505;
@@ -41,6 +43,10 @@
         align-items: center;
         justify-content: center;
         padding: clamp(40px, 5vw, 60px) 18px;
+        background-image: url('assets/bg-parchment.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
 
       .hero__content {
@@ -51,11 +57,16 @@
       .hero__title {
         max-width: 880px;
         margin: 0 auto;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: clamp(46px, 7.4vw, 86px);
-        font-weight: 900;
-        line-height: 0.92;
-        letter-spacing: 0;
+        font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
+        font-size: clamp(38px, 6vw, 80px);
+        font-weight: 400;
+        line-height: 1.08;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .hero__title--red {
+        color: #cc2929;
       }
 
       .hero__subtitle {
@@ -864,7 +875,7 @@
         }
 
         .hero__title {
-          font-size: clamp(28px, 8.5vw, 42px);
+          font-size: clamp(26px, 8vw, 42px);
         }
 
         .hero__subtitle {
@@ -1351,7 +1362,9 @@
     <main class="hero">
       <section class="hero__content" aria-labelledby="hero-title">
         <h1 class="hero__title" id="hero-title">
-          Reviví las mejores historietas de Robin Wood.
+          LA COLECCIÓN<br />
+          DEFINITIVA DE<br />
+          <span class="hero__title--red">ROBIN WOOD</span>
         </h1>
 
         <div class="hero__rating" aria-label="Calificación 4.8/5 estrellas">
@@ -1378,10 +1391,10 @@
           Acceso inmediato y de por vida.
         </p>
 
-        <figure class="hero__product" aria-label="Pack de historietas de Robin Wood">
+        <figure class="hero__product" aria-label="Colección de historietas de Robin Wood">
           <img
-            src="assets/pack-historietas-mockup.png"
-            alt="Colección completa de historietas de Robin Wood: Nippur de Lagash, Dago, Gilgamesh, Pepe Sánchez y Mark"
+            src="assets/robin-wood-collage-mockup.png"
+            alt="Colección completa de Robin Wood con Dago, Gilgamesh, El Tony, Pepe Sánchez, Nippur, Savarese y portadas de cómics"
           />
         </figure>
 
