@@ -273,6 +273,25 @@
         background: linear-gradient(135deg, #dd6b20, #9c4221);
       }
 
+      .includes__placeholder-cover--blue {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+      }
+      .includes__placeholder-cover--red {
+        background: linear-gradient(135deg, #cc2929, #7a1515);
+      }
+      .includes__placeholder-cover--orange {
+        background: linear-gradient(135deg, #ff8c00, #b84f00);
+      }
+      .includes__placeholder-cover--green {
+        background: linear-gradient(135deg, #2e7d32, #1b5e20);
+      }
+      .includes__placeholder-cover--purple {
+        background: linear-gradient(135deg, #6a1b9a, #4a148c);
+      }
+      .includes__placeholder-cover--gold {
+        background: linear-gradient(135deg, #b8860b, #6b4c08);
+      }
+
       .placeholder-tag {
         transform: rotate(-10deg);
         letter-spacing: 0.05em;
@@ -350,6 +369,75 @@
         display: block;
         width: 100%;
         height: auto;
+      }
+
+      .includes__list-wrapper {
+        position: relative;
+        max-height: 820px;
+        overflow: hidden;
+        transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 24px;
+      }
+
+      .includes__list-wrapper.is-expanded {
+        max-height: 15000px;
+      }
+
+      .includes__fade-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(180deg, rgba(255, 253, 249, 0) 0%, rgba(255, 253, 249, 0.96) 65%, rgba(255, 253, 249, 1) 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 30px;
+        pointer-events: none;
+        z-index: 10;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+
+      .includes__list-wrapper.is-expanded .includes__fade-overlay {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .includes__see-more-btn {
+        background: #ff8c00;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 14px 44px;
+        font-family: 'Gagalin-Regular', Arial, sans-serif;
+        font-size: clamp(20px, 3vw, 26px);
+        font-weight: normal;
+        cursor: pointer;
+        pointer-events: auto;
+        box-shadow: 0 10px 24px rgba(255, 140, 0, 0.35);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .includes__see-more-btn:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 14px 30px rgba(255, 140, 0, 0.55);
+        background: #e57d00;
+      }
+
+      .includes__see-more-btn svg {
+        width: 22px;
+        height: 22px;
+        fill: currentColor;
+        transition: transform 0.3s ease;
+      }
+
+      .includes__see-more-btn:hover svg {
+        transform: translateY(2px);
       }
 
       .bonuses {
@@ -1439,7 +1527,8 @@
           ¿QUÉ INCLUYE ESTA COLECCIÓN?
         </h2>
 
-        <div class="includes__list">
+        <div class="includes__list-wrapper" id="includes-wrapper">
+          <div class="includes__list">
           <!-- 1. Nippur de Lagash -->
           <article class="includes__item">
             <div class="includes__cover-wrap">
@@ -1695,7 +1784,535 @@
               <p class="includes__desc">Supervivencia y batallas brutales en un mundo inhóspito.</p>
             </div>
           </article>
+
+          <!-- 17. Fantasía -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--blue">
+                <span class="placeholder-tag">FANTASÍA</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">FANTASÍA</h3>
+              <p class="includes__desc">Historias mágicas y relatos de imaginación desbordante.</p>
+            </div>
+          </article>
+
+          <!-- 18. Intervalo -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--red">
+                <span class="placeholder-tag">INTERVALO</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">INTERVALO</h3>
+              <p class="includes__desc">Antología de dramas, misterios y novelas gráficas inolvidables.</p>
+            </div>
+          </article>
+
+          <!-- 19. Martin Hel -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--orange">
+                <span class="placeholder-tag">MARTIN HEL</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">MARTIN HEL</h3>
+              <p class="includes__desc">Un detective del ocultismo enfrentando casos paranormales y demoníacos.</p>
+            </div>
+          </article>
+
+          <!-- 20. Pipa Sánchez -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--green">
+                <span class="placeholder-tag">PIPA SÁNCHEZ</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">PIPA SÁNCHEZ</h3>
+              <p class="includes__desc">Aventuras pícaras y llenas de humor al estilo de Pepe Sánchez.</p>
+            </div>
+          </article>
+
+          <!-- 21. Big Norman -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--purple">
+                <span class="placeholder-tag">BIG NORMAN</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">BIG NORMAN</h3>
+              <p class="includes__desc">El coloso vikingo en batallas brutales por el honor de su pueblo.</p>
+            </div>
+          </article>
+
+          <!-- 22. Ahorcado -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--gold">
+                <span class="placeholder-tag">AHORCADO</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">AHORCADO</h3>
+              <p class="includes__desc">Intriga y acción en las fronteras de la justicia y la venganza.</p>
+            </div>
+          </article>
+
+          <!-- 23. Chindits -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--blue">
+                <span class="placeholder-tag">CHINDITS</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">CHINDITS</h3>
+              <p class="includes__desc">Hazañas militares y compañerismo en las selvas de Birmania.</p>
+            </div>
+          </article>
+
+          <!-- 24. El Ángel -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--red">
+                <span class="placeholder-tag">EL ÁNGEL</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">EL ÁNGEL</h3>
+              <p class="includes__desc">Un justiciero misterioso que lucha contra el crimen en las sombras.</p>
+            </div>
+          </article>
+
+          <!-- 25. La Legión de Robin Wood -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--orange">
+                <span class="placeholder-tag">LA LEGIÓN</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">LA LEGION DE ROBIN WOOD</h3>
+              <p class="includes__desc">El gran tributo con los personajes y aventuras más icónicos reunidos.</p>
+            </div>
+          </article>
+
+          <!-- 26. Lo mejor de Robin Wood -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--green">
+                <span class="placeholder-tag">LO MEJOR</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">LO MEJOR DE ROBIN WOOD</h3>
+              <p class="includes__desc">Una selección imperdible de sus mejores guiones e historietas.</p>
+            </div>
+          </article>
+
+          <!-- 27. Aquí la Legión -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--purple">
+                <span class="placeholder-tag">AQUÍ LA LEGIÓN</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">AQUÍ LA LEGIÓN</h3>
+              <p class="includes__desc">Crónicas y hazañas de soldados de fortuna en zonas de conflicto.</p>
+            </div>
+          </article>
+
+          <!-- 28. Ibañez -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--gold">
+                <span class="placeholder-tag">IBAÑEZ</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">IBAÑEZ</h3>
+              <p class="includes__desc">Historias de valor, intriga y conspiraciones de época.</p>
+            </div>
+          </article>
+
+          <!-- 29. Los Salvajes Niños de la Memoria -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--blue">
+                <span class="placeholder-tag">SALVAJES NIÑOS</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">LOS SALVAJES NIÑOS DE LA MEMORIA</h3>
+              <p class="includes__desc">Un relato conmovedor sobre la inocencia y la supervivencia en tiempos difíciles.</p>
+            </div>
+          </article>
+
+          <!-- 30. Morten -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--red">
+                <span class="placeholder-tag">MORTEN</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">MORTEN</h3>
+              <p class="includes__desc">Acción y suspenso en un relato oscuro cargado de giros inesperados.</p>
+            </div>
+          </article>
+
+          <!-- 31. Amanda -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--orange">
+                <span class="placeholder-tag">AMANDA</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">AMANDA</h3>
+              <p class="includes__desc">Una heroína decidida enfrentando los desafíos del amor y el destino.</p>
+            </div>
+          </article>
+
+          <!-- 32. Billy Grant -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--green">
+                <span class="placeholder-tag">BILLY GRANT</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">BILLY GRANT</h3>
+              <p class="includes__desc">Aventuras del oeste con el pistolero errante más rápido y letal.</p>
+            </div>
+          </article>
+
+          <!-- 33. Dave y Rio -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--purple">
+                <span class="placeholder-tag">DAVE Y RIO</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">DAVE Y RIO</h3>
+              <p class="includes__desc">Dos amigos inseparables cruzando fronteras y enfrentando peligros juntos.</p>
+            </div>
+          </article>
+
+          <!-- 34. El Cosaco -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--gold">
+                <span class="placeholder-tag">EL COSACO</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">EL COSACO</h3>
+              <p class="includes__desc">Caballería, honor y batallas en las vastas estepas de Europa Oriental.</p>
+            </div>
+          </article>
+
+          <!-- 35. Jackaroe -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--blue">
+                <span class="placeholder-tag">JACKAROE</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">JACKAROE</h3>
+              <p class="includes__desc">El rastreador solitario en un viaje de supervivencia por el desierto indómito.</p>
+            </div>
+          </article>
+
+          <!-- 36. Largo Nolan -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--red">
+                <span class="placeholder-tag">LARGO NOLAN</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">LARGO NOLAN</h3>
+              <p class="includes__desc">Acción policíaca y dilemas morales en las calles de la gran ciudad.</p>
+            </div>
+          </article>
+
+          <!-- 37. Nan-Hai -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--orange">
+                <span class="placeholder-tag">NAN-HAI</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">NAN-HAI</h3>
+              <p class="includes__desc">Secretos, artes marciales y misterio en el lejano Oriente.</p>
+            </div>
+          </article>
+
+          <!-- 38. Ronstadt -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--green">
+                <span class="placeholder-tag">RONSTADT</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">RONSTADT</h3>
+              <p class="includes__desc">Un relato de intrigas familiares, ambición y poder.</p>
+            </div>
+          </article>
+
+          <!-- 39. Trilogía Vikinga -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--purple">
+                <span class="placeholder-tag">TRILOGÍA VIKINGA</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">TRILOGÍA VIKINGA</h3>
+              <p class="includes__desc">La gran saga épica sobre la conquista, viajes y leyendas del norte.</p>
+            </div>
+          </article>
+
+          <!-- 40. Anders -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--gold">
+                <span class="placeholder-tag">ANDERS</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">ANDERS</h3>
+              <p class="includes__desc">Un relato de valor, redención y batallas medievales.</p>
+            </div>
+          </article>
+
+          <!-- 41. Brío -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--blue">
+                <span class="placeholder-tag">BRÍO</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">BRÍO</h3>
+              <p class="includes__desc">Pura velocidad, adrenalina y desafíos de superación personal.</p>
+            </div>
+          </article>
+
+          <!-- 42. El Peregrino -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--red">
+                <span class="placeholder-tag">EL PEREGRINO</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">EL PEREGRINO</h3>
+              <p class="includes__desc">El misterioso viajero en busca de redención a través de tierras olvidadas.</p>
+            </div>
+          </article>
+
+          <!-- 43. Kayan -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--orange">
+                <span class="placeholder-tag">KAYAN</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">KAYAN</h3>
+              <p class="includes__desc">Un relato exótico de mitología y combates ancestrales.</p>
+            </div>
+          </article>
+
+          <!-- 44. Or-Grund -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--green">
+                <span class="placeholder-tag">OR-GRUND</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">OR-GRUND</h3>
+              <p class="includes__desc">Fuerza bruta y aventuras en mundos prehistóricos indómitos.</p>
+            </div>
+          </article>
+
+          <!-- 45. Troels -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--purple">
+                <span class="placeholder-tag">TROELS</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">TROELS</h3>
+              <p class="includes__desc">Batallas y mitos nórdicos contados con gran intensidad dramática.</p>
+            </div>
+          </article>
+
+          <!-- 46. Chaco -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--gold">
+                <span class="placeholder-tag">CHACO</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">CHACO</h3>
+              <p class="includes__desc">El indómito guerrero del Chaco defendiendo su tierra natal.</p>
+            </div>
+          </article>
+
+          <!-- 47. Danske -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--blue">
+                <span class="placeholder-tag">DANSKE</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">DANSKE</h3>
+              <p class="includes__desc">Sagas nórdicas medievales llenas de traición, conquistas y heroísmo.</p>
+            </div>
+          </article>
+
+          <!-- 48. Holbeck -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--red">
+                <span class="placeholder-tag">HOLBECK</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">HOLBECK</h3>
+              <p class="includes__desc">Historias de intriga política y espionaje en las sombras de la corte.</p>
+            </div>
+          </article>
+
+          <!-- 49. Kozakovich y Connors -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--orange">
+                <span class="placeholder-tag">KOZAKOVICH</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">KOZAKOVICH Y CONNORS</h3>
+              <p class="includes__desc">Las andanzas humorísticas y alocadas de una dupla dispareja de aventureros.</p>
+            </div>
+          </article>
+
+          <!-- 50. Los Aventureros -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--green">
+                <span class="placeholder-tag">AVENTUREROS</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">LOS AVENTUREROS</h3>
+              <p class="includes__desc">El gran clásico sobre un trío inseparable recorriendo el mundo.</p>
+            </div>
+          </article>
+
+          <!-- 51. Morgan -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--purple">
+                <span class="placeholder-tag">MORGAN</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">MORGAN</h3>
+              <p class="includes__desc">Cuentos del mar y la edad de oro de los piratas y corsarios.</p>
+            </div>
+          </article>
+
+          <!-- 52. Dennis Martin y Grace Henrichsen -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--gold">
+                <span class="placeholder-tag">DENNIS & GRACE</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">DENNIS MARTIN Y GRACE HENRICHSEN</h3>
+              <p class="includes__desc">La legendaria pareja de espías en misiones de alto riesgo.</p>
+            </div>
+          </article>
+
+          <!-- 53. Se busca una Secretaria -->
+          <article class="includes__item">
+            <div class="includes__cover-wrap">
+              <div class="includes__placeholder-cover includes__placeholder-cover--blue">
+                <span class="placeholder-tag">SECRETARIA</span>
+              </div>
+            </div>
+            <div class="includes__divider"></div>
+            <div class="includes__details">
+              <h3 class="includes__name">SE BUSCA UNA SECRETARIA</h3>
+              <p class="includes__desc">Humor de oficina y enredos cotidianos en una comedia clásica.</p>
+            </div>
+          </article>
         </div>
+
+        <div class="includes__fade-overlay" id="includes-fade">
+          <button class="includes__see-more-btn" id="includes-see-more" aria-label="Ver más personajes">
+            <span>VER MÁS</span>
+            <svg viewBox="0 0 24 24">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
 
         <p class="includes__delivery-note">
           <span class="includes__delivery-dot" aria-hidden="true"></span>
@@ -2230,6 +2847,16 @@
         
         updateTimer();
         setInterval(updateTimer, 1000);
+
+        // See more functionality for includes section
+        const seeMoreBtn = document.getElementById('includes-see-more');
+        const includesWrapper = document.getElementById('includes-wrapper');
+        
+        if (seeMoreBtn && includesWrapper) {
+          seeMoreBtn.addEventListener('click', () => {
+            includesWrapper.classList.add('is-expanded');
+          });
+        }
       });
     </script>
   </body>
