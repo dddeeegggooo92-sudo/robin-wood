@@ -184,12 +184,22 @@
         justify-content: center;
         gap: 16px;
         max-width: 880px;
-        margin: 0 auto clamp(32px, 4vw, 48px);
+        margin: 0 auto 12px;
         color: var(--black);
         font-family: Arial, Helvetica, sans-serif;
         font-size: clamp(28px, 4.5vw, 48px);
         font-weight: 900;
         line-height: 1;
+        text-align: center;
+      }
+
+      .includes__subtitle {
+        max-width: 740px;
+        margin: 0 auto clamp(34px, 5vw, 52px);
+        color: #40506d;
+        font-size: clamp(19px, 2.5vw, 25px);
+        font-weight: 500;
+        line-height: 1.35;
         text-align: center;
       }
       
@@ -1001,8 +1011,13 @@
 
 
         .includes__title {
-          margin-bottom: 24px;
+          margin-bottom: 8px;
           font-size: clamp(26px, 7.5vw, 36px);
+        }
+
+        .includes__subtitle {
+          margin-bottom: 24px;
+          font-size: clamp(16px, 4.2vw, 19px);
         }
 
         .includes__title::before,
@@ -1530,6 +1545,9 @@
         <h2 class="includes__title" id="includes-title">
           ¿QUÉ INCLUYE ESTA COLECCIÓN?
         </h2>
+        <p class="includes__subtitle">
+          Más de 40 series y 70 gb de contenido en historietas del gran Robin Wood
+        </p>
 
         <div class="includes__list-wrapper" id="includes-wrapper">
           <div class="includes__list">
