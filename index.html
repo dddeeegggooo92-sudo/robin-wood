@@ -6,6 +6,7 @@
     <title>Pack Historietas Digitales</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+      @import url('https://db.onlinewebfonts.com/c/240a7cb10b49b02c94ceddc459d385a9?family=Gagalin-Regular');
 
       :root {
         color-scheme: light;
@@ -126,11 +127,12 @@
         margin-top: clamp(30px, 4vw, 54px);
         overflow: hidden;
         border-radius: 18px;
-        background: linear-gradient(180deg, #08c934 0%, #08af2d 100%);
+        background: linear-gradient(180deg, #ff8c00 0%, #ff6200 100%);
         box-shadow: 0 18px 22px rgba(0, 0, 0, 0.2);
         color: #fff;
+        font-family: 'Gagalin-Regular', Arial, sans-serif;
         font-size: clamp(30px, 5vw, 55px);
-        font-weight: 900;
+        font-weight: normal;
         line-height: 1;
         text-decoration: none;
         text-transform: uppercase;
@@ -140,7 +142,7 @@
 
       .hero__cta:hover {
         transform: translateY(-4px) scale(1.04);
-        box-shadow: 0 22px 35px rgba(8, 175, 45, 0.6);
+        box-shadow: 0 22px 35px rgba(255, 98, 0, 0.6);
         filter: brightness(1.08);
         animation: none;
       }
@@ -352,8 +354,8 @@
 
       .bonuses {
         padding: clamp(40px, 5vw, 60px) 18px;
-        background: #fff;
-        color: #07142f;
+        background: #cc2929;
+        color: #ffffff;
       }
 
       .bonuses__content {
@@ -375,25 +377,38 @@
       .bonuses__title {
         max-width: 880px;
         margin: 0 auto;
-        color: #07142f;
-        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
         font-size: clamp(36px, 5.2vw, 64px);
-        font-weight: 900;
-        line-height: 0.96;
-        letter-spacing: 0;
+        font-weight: 400;
+        line-height: 1.05;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
       }
 
       .bonuses__title strong {
-        color: #ff650d;
+        color: #ffd700;
         font-weight: 900;
       }
 
       .bonuses__subtitle {
         max-width: 740px;
         margin: clamp(18px, 2.8vw, 28px) auto clamp(34px, 5vw, 52px);
-        color: #40506d;
+        color: rgba(255, 255, 255, 0.9);
         font-size: clamp(20px, 2.8vw, 29px);
         line-height: 1.28;
+      }
+
+      .bonuses .cta-price-tag {
+        color: #ffffff;
+      }
+
+      .bonuses .cta-price-tag strong {
+        color: #ffd700;
+      }
+
+      .bonuses__safe {
+        color: rgba(255, 255, 255, 0.9);
       }
 
       .bonuses__list {
@@ -512,11 +527,12 @@
         margin-top: clamp(28px, 4vw, 46px);
         overflow: hidden;
         border-radius: 18px;
-        background: linear-gradient(180deg, #08c934 0%, #08af2d 100%);
+        background: linear-gradient(180deg, #ff8c00 0%, #ff6200 100%);
         box-shadow: 0 18px 22px rgba(0, 0, 0, 0.2);
         color: #fff;
+        font-family: 'Gagalin-Regular', Arial, sans-serif;
         font-size: clamp(30px, 5vw, 55px);
-        font-weight: 900;
+        font-weight: normal;
         line-height: 1;
         text-decoration: none;
         text-transform: uppercase;
@@ -526,7 +542,7 @@
 
       .bonuses__cta:hover {
         transform: translateY(-4px) scale(1.04);
-        box-shadow: 0 22px 35px rgba(8, 175, 45, 0.6);
+        box-shadow: 0 22px 35px rgba(255, 98, 0, 0.6);
         filter: brightness(1.08);
         animation: none;
       }
@@ -889,7 +905,8 @@
 
         .hero__cta {
           border-radius: 15px;
-          letter-spacing: -0.01em;
+          font-weight: normal;
+          letter-spacing: 0.02em;
           font-size: clamp(22px, 3.2vw, 38px);
         }
 
@@ -963,6 +980,8 @@
 
         .bonuses__cta {
           width: min(760px, calc(100% - 30px));
+          font-weight: normal;
+          letter-spacing: 0.02em;
           font-size: clamp(22px, 3.2vw, 38px);
         }
 
@@ -1318,15 +1337,15 @@
       @keyframes ctaPulse {
         0% {
           transform: scale(1);
-          box-shadow: 0 12px 20px rgba(8, 199, 52, 0.2);
+          box-shadow: 0 12px 20px rgba(255, 98, 0, 0.2);
         }
         50% {
           transform: scale(1.018);
-          box-shadow: 0 18px 30px rgba(8, 199, 52, 0.4);
+          box-shadow: 0 18px 30px rgba(255, 98, 0, 0.4);
         }
         100% {
           transform: scale(1);
-          box-shadow: 0 12px 20px rgba(8, 199, 52, 0.2);
+          box-shadow: 0 12px 20px rgba(255, 98, 0, 0.2);
         }
       }
     </style>
@@ -1556,7 +1575,7 @@
         <p class="bonuses__eyebrow">&gt; Bonos de regalo exclusivos &lt;</p>
 
         <h2 class="bonuses__title" id="bonuses-title">
-          Llevate 6 bonos de regalo <strong style="color: #e53e3e;">gratis</strong>
+          Llevate 6 bonos de regalo <strong>gratis</strong>
         </h2>
 
         <p class="bonuses__subtitle">
