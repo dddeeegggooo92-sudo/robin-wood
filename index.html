@@ -38,6 +38,16 @@
         text-rendering: geometricPrecision;
       }
 
+      img {
+        -webkit-user-drag: none;
+        user-drag: none;
+        -webkit-touch-callout: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+
       .hero {
         display: flex;
         min-height: 100vh;
@@ -2903,6 +2913,19 @@
             includesWrapper.classList.add('is-expanded');
           });
         }
+
+        // Prevent image saving, dragging, and context menu on all images
+        document.addEventListener('contextmenu', (e) => {
+          if (e.target.tagName === 'IMG' || e.target.closest('img')) {
+            e.preventDefault();
+          }
+        });
+
+        document.addEventListener('dragstart', (e) => {
+          if (e.target.tagName === 'IMG' || e.target.closest('img')) {
+            e.preventDefault();
+          }
+        });
       });
     </script>
 
