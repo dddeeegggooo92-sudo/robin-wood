@@ -156,48 +156,71 @@
         position: relative;
         display: inline-flex;
         width: min(760px, calc(100% - 30px));
-        min-height: clamp(74px, 9vw, 112px);
+        min-height: clamp(68px, 8.5vw, 96px);
         align-items: center;
         justify-content: center;
+        gap: clamp(10px, 1.8vw, 20px);
         margin-top: clamp(10px, 1.6vw, 16px);
+        padding: 0 clamp(16px, 3vw, 36px);
         overflow: hidden;
         border-radius: 18px;
-        background: linear-gradient(180deg, #d32f2f 0%, #b71c1c 100%);
-        box-shadow: 0 16px 26px rgba(183, 28, 28, 0.38);
-        color: #fff;
-        font-family: 'Gagalin-Regular', Arial, sans-serif;
-        font-size: clamp(30px, 5vw, 55px);
+        border: 1.5px solid #c98d00;
+        background: linear-gradient(180deg, #ffe843 0%, #ffd000 55%, #f5af02 100%);
+        box-shadow: 
+          inset 0 1px 0 rgba(255, 255, 255, 0.75),
+          inset 0 -2px 0 rgba(0, 0, 0, 0.12),
+          0 14px 26px rgba(201, 141, 0, 0.42);
+        color: #0c2340;
+        font-family: 'Gagalin-Regular', Impact, Arial, sans-serif;
+        font-size: clamp(26px, 4.2vw, 46px);
         font-weight: normal;
         line-height: 1;
         text-decoration: none;
         text-transform: uppercase;
+        letter-spacing: 0.01em;
         animation: ctaPulse 3s infinite ease-in-out;
         transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
       }
 
       .hero__cta:hover {
-        transform: translateY(-4px) scale(1.04);
-        box-shadow: 0 22px 35px rgba(183, 28, 28, 0.58);
-        filter: brightness(1.08);
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 
+          inset 0 1px 0 rgba(255, 255, 255, 0.85),
+          inset 0 -2px 0 rgba(0, 0, 0, 0.15),
+          0 20px 34px rgba(201, 141, 0, 0.6);
+        filter: brightness(1.04);
         animation: none;
-      }
-
-      .hero__cta::after {
-        position: absolute;
-        right: -30px;
-        bottom: -26px;
-        width: 140px;
-        height: 76px;
-        border-radius: 60px 0 0 0;
-        background: rgba(255, 255, 255, 0.12);
-        content: "";
-        transform: rotate(-18deg);
       }
 
       .hero__cta span {
         position: relative;
         z-index: 1;
-        padding: 0 22px;
+        color: #0c2340;
+        padding: 0;
+      }
+
+      .cta-cart-icon {
+        width: clamp(24px, 3.6vw, 38px);
+        height: clamp(24px, 3.6vw, 38px);
+        fill: #0c2340;
+        flex-shrink: 0;
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-arrow-icon {
+        width: clamp(18px, 2.6vw, 28px);
+        height: clamp(18px, 2.6vw, 28px);
+        stroke: #0c2340;
+        fill: none;
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        flex-shrink: 0;
+        display: block;
+        position: relative;
+        z-index: 1;
       }
 
 
@@ -669,48 +692,47 @@
         position: relative;
         display: inline-flex;
         width: min(760px, calc(100% - 30px));
-        min-height: clamp(74px, 9vw, 112px);
+        min-height: clamp(68px, 8.5vw, 96px);
         align-items: center;
         justify-content: center;
+        gap: clamp(10px, 1.8vw, 20px);
         margin-top: clamp(10px, 1.6vw, 16px);
+        padding: 0 clamp(16px, 3vw, 36px);
         overflow: hidden;
         border-radius: 18px;
-        background: linear-gradient(180deg, #d32f2f 0%, #b71c1c 100%);
-        box-shadow: 0 16px 26px rgba(183, 28, 28, 0.38);
-        color: #fff;
-        font-family: 'Gagalin-Regular', Arial, sans-serif;
-        font-size: clamp(30px, 5vw, 55px);
+        border: 1.5px solid #c98d00;
+        background: linear-gradient(180deg, #ffe843 0%, #ffd000 55%, #f5af02 100%);
+        box-shadow: 
+          inset 0 1px 0 rgba(255, 255, 255, 0.75),
+          inset 0 -2px 0 rgba(0, 0, 0, 0.12),
+          0 14px 26px rgba(201, 141, 0, 0.42);
+        color: #0c2340;
+        font-family: 'Gagalin-Regular', Impact, Arial, sans-serif;
+        font-size: clamp(26px, 4.2vw, 46px);
         font-weight: normal;
         line-height: 1;
         text-decoration: none;
         text-transform: uppercase;
+        letter-spacing: 0.01em;
         animation: ctaPulse 3s infinite ease-in-out;
         transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
       }
 
       .bonuses__cta:hover {
-        transform: translateY(-4px) scale(1.04);
-        box-shadow: 0 22px 35px rgba(183, 28, 28, 0.58);
-        filter: brightness(1.08);
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 
+          inset 0 1px 0 rgba(255, 255, 255, 0.85),
+          inset 0 -2px 0 rgba(0, 0, 0, 0.15),
+          0 20px 34px rgba(201, 141, 0, 0.6);
+        filter: brightness(1.04);
         animation: none;
-      }
-
-      .bonuses__cta::after {
-        position: absolute;
-        right: -30px;
-        bottom: -26px;
-        width: 140px;
-        height: 76px;
-        border-radius: 60px 0 0 0;
-        background: rgba(255, 255, 255, 0.12);
-        content: "";
-        transform: rotate(-18deg);
       }
 
       .bonuses__cta span {
         position: relative;
         z-index: 1;
-        padding: 0 22px;
+        color: #0c2340;
+        padding: 0;
       }
 
       .faq {
@@ -1059,10 +1081,13 @@
         }
 
         .hero__cta {
-          border-radius: 15px;
+          border-radius: 14px;
           font-weight: normal;
-          letter-spacing: 0.02em;
-          font-size: clamp(22px, 3.2vw, 38px);
+          letter-spacing: 0.01em;
+          font-size: clamp(18px, 4.4vw, 30px);
+          min-height: 60px;
+          gap: 8px;
+          padding: 0 12px;
         }
 
 
@@ -1144,9 +1169,13 @@
 
         .bonuses__cta {
           width: min(760px, calc(100% - 30px));
+          border-radius: 14px;
           font-weight: normal;
-          letter-spacing: 0.02em;
-          font-size: clamp(22px, 3.2vw, 38px);
+          letter-spacing: 0.01em;
+          font-size: clamp(18px, 4.4vw, 30px);
+          min-height: 60px;
+          gap: 8px;
+          padding: 0 12px;
         }
 
         .bonus-card {
@@ -1342,7 +1371,6 @@
       .guarantee-cta__btn {
         width: min(760px, calc(100% - 30px)) !important;
         margin-top: 0 !important;
-        font-size: clamp(22px, 3.2vw, 38px) !important;
       }
 
       .guarantee-cta__safe {
@@ -1528,15 +1556,24 @@
       @keyframes ctaPulse {
         0% {
           transform: scale(1);
-          box-shadow: 0 12px 20px rgba(183, 28, 28, 0.25);
+          box-shadow: 
+            inset 0 1px 0 rgba(255, 255, 255, 0.75),
+            inset 0 -2px 0 rgba(0, 0, 0, 0.12),
+            0 10px 20px rgba(201, 141, 0, 0.35);
         }
         50% {
           transform: scale(1.018);
-          box-shadow: 0 18px 30px rgba(183, 28, 28, 0.45);
+          box-shadow: 
+            inset 0 1px 0 rgba(255, 255, 255, 0.85),
+            inset 0 -2px 0 rgba(0, 0, 0, 0.15),
+            0 16px 28px rgba(201, 141, 0, 0.55);
         }
         100% {
           transform: scale(1);
-          box-shadow: 0 12px 20px rgba(183, 28, 28, 0.25);
+          box-shadow: 
+            inset 0 1px 0 rgba(255, 255, 255, 0.75),
+            inset 0 -2px 0 rgba(0, 0, 0, 0.12),
+            0 10px 20px rgba(201, 141, 0, 0.35);
         }
       }
     </style>
@@ -1613,7 +1650,13 @@
           <span class="countdown-timer">15:00</span>
         </div>
         <a class="hero__cta" href="https://pay.hotmart.com/D107172976C" target="_self" aria-label="Comprar mi pack">
+          <svg class="cta-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+          </svg>
           <span>¡SÍ, QUIERO MI COLECCIÓN!</span>
+          <svg class="cta-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </a>
 
         <p class="hero__safe">
@@ -2515,8 +2558,14 @@
           <span>La oferta termina en:</span>
           <span class="countdown-timer">15:00</span>
         </div>
-        <a class="bonuses__cta" href="https://pay.hotmart.com/D107172976C" target="_self">
+        <a class="bonuses__cta" href="https://pay.hotmart.com/D107172976C" target="_self" aria-label="Comprar mi pack">
+          <svg class="cta-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+          </svg>
           <span>¡SÍ, QUIERO MI COLECCIÓN!</span>
+          <svg class="cta-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </a>
 
         <p class="bonuses__safe">
@@ -2772,7 +2821,13 @@
               <span class="countdown-timer">15:00</span>
             </div>
             <a class="bonuses__cta guarantee-cta__btn" href="https://pay.hotmart.com/D107172976C" target="_self" aria-label="Comprar mi pack">
+              <svg class="cta-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+              </svg>
               <span>¡SÍ, QUIERO MI COLECCIÓN!</span>
+              <svg class="cta-arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
             
             <p class="hero__safe guarantee-cta__safe">
